@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import * as api from './api'
+
+window.zepp = api;
+
 class App extends Component {
   render() {
     return (

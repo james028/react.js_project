@@ -48,6 +48,6 @@ export function createComment({postId, username, body, position:{x,y}}) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({postId, username, body, position:{x,y}});
+        body: JSON.stringify({postId, username, body, position:{x,y}}),
     }).then(transformJSON);
 }
