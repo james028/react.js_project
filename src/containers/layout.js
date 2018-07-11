@@ -19,7 +19,7 @@ class Layout extends Component {
             <Route path={urls.PROJECT_CREATE} component={ProjectCreate} />
             <Route path={urls.PROJECT_EDIT} component={ProjectEdit} />
           </Switch>
-          <Link to='/login'>Projects</Link>
+          homepage
         </div>
       </Fragment>
       </div>

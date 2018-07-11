@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom';
+import HamburgerMenu from './hamburgermenu'
 import './header.css'
 import {
     withStyles,
@@ -14,6 +15,7 @@ import {
     ListItemText,
     Divider,
   } from '@material-ui/core';
+
   import * as urls from '../urls';
 
 
@@ -24,7 +26,7 @@ import {
     },
     sidebar: {
         width: '300px'
-    }
+    },
   };
 
 class Header extends PureComponent {
@@ -53,8 +55,10 @@ class Header extends PureComponent {
                 <IconButton
                     color="inherit"
                     aria-label="Menu"
+                    onClick={this.onClickOpen}
                 >
-                <div onClick={this.onClickOpen}>aa</div>
+                <HamburgerMenu />
+                <Link to={urls.ROOT}>Homepage</Link>
                 </IconButton>
                 <Typography variant="title" color="inherit" >
                     Zeppelin

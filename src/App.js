@@ -27,7 +27,7 @@ class App extends Component {
             <Switch>
               <Route exact path={urls.ROOT} component={Layout} />
               <Route path={urls.LOGIN} component={LoginPage} />
-              <Route exact path={urls.PROJECT_LIST} component={ProjectList} />
+              <Route path={urls.PROJECT_LIST} component={ProjectList} />
               <Route path={urls.PROJECT_CREATE} component={ProjectCreate} />
               <Route path={urls.PROJECT_EDIT} component={ProjectEdit} />
             </Switch>
