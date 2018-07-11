@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { withStyles, CssBaseline } from '@material-ui/core';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
 import * as api from './api'
 import * as urls from './urls';
 import LoginPage from './containers/loginpage';
 import Layout from './containers/layout';
+import ProjectList from './containers/projectList'
+import ProjectCreate from './containers/projectCreate'
+import ProjectEdit from './containers/projectEdit'
 
 window.zepp = api;
 
@@ -21,12 +24,13 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <CssBaseline>
             <Switch>
               <Route exact path={urls.ROOT} component={Layout} />
               <Route path={urls.LOGIN} component={LoginPage} />
+              <Route exact path={urls.PROJECT_LIST} component={ProjectList} />
+              <Route path={urls.PROJECT_CREATE} component={ProjectCreate} />
+              <Route path={urls.PROJECT_EDIT} component={ProjectEdit} />
             </Switch>
-          </CssBaseline>
         </Router>
       </div>
     );
