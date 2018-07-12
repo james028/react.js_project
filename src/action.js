@@ -27,4 +27,21 @@ export function login({username, password}) {
     }
 }
 
-const logout = createAction(actionTypes.LOGOUT);
+export const logout = createAction(actionTypes.LOGOUT);
+
+const startReadProjectList = createAction(actionTypes.READ_PROJECT_LIST_START);
+const endReadProjectList = createAction(actionTypes.READ_PROJECT_LIST_END);
+
+export function readProjectList() {
+  return (dispatch, getState) => {
+    dispatch(startReadProjectList());
+    return api
+      .readPostList()
+      .then((response) => {
+        dispatch(endReadProjectList(response.posts));
+      })
+      .catch((error) => {
+        dispatch(endReadProjectList(new Error('Network error')));
+      });
+  };
+}

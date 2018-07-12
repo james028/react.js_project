@@ -47,6 +47,11 @@ class Header extends PureComponent {
         })
     }
 
+    handleLogout = () => {
+        const { logout } = this.props;
+        logout();
+    }
+
   render() {
       const { classes } = this.props;
     return (
@@ -63,8 +68,8 @@ class Header extends PureComponent {
                 <Typography variant="title" color="inherit" >
                     Zeppelin
                 </Typography>
-                <div>
-                    <Button color="inherit">Logout</Button>
+                <div >
+                    <Button color="inherit" onClick={this.handleLogout}>Logout</Button>
                 </div>
             </Toolbar>
             <Drawer open={this.state.isDrawer} >
