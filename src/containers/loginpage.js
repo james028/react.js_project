@@ -81,8 +81,10 @@ class LoginPage extends Component {
   }
 }
 
-const mapDispatchToProps =  {
+/*const mapDispatchToProps =  {
   login: actions.login
 }
 
 export default withStyles(styles)(withRouter(connect(null, mapDispatchToProps)(LoginPage)));
+*/
+export default withStyles(styles)(LoginPage);

@@ -47,10 +47,10 @@ class Header extends PureComponent {
         })
     }
 
-    handleLogout = () => {
-        const { logout } = this.props;
-        logout();
-    }
+    //handleLogout = () => {
+        //const { logout } = this.props;
+        //logout();
+    //}
 
   render() {
       const { classes } = this.props;
@@ -62,7 +62,7 @@ class Header extends PureComponent {
                     aria-label="Menu"
                     onClick={this.onClickOpen}
                 >
-                <HamburgerMenu />
+                
                 <Link to={urls.ROOT}>Homepage</Link>
                 </IconButton>
                 <Typography variant="title" color="inherit" >
